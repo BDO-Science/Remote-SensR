@@ -1,2 +1,2 @@
 # Remote-SensR
-Repo for remote sensing related scripts and Shiny apps.
+Repo for remote sensing related scripts and Shiny apps. The Shiny app is to choose the region of interest and download the remote sensing data you want from Google Earth Engine (requires package rgee, Python, and a Google account). The associated Google Earth Engine script is to read in and visualize the remote sensing data on a map of the Bay_Delta. Not included in this repo are the shapefiles needed for the plotting of central valley waterways.
