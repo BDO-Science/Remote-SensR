@@ -1,6 +1,6 @@
 #install and load rgee package
 #install.packages("rgee")
-reticulate::use_condaenv("rgee", required = TRUE)
+#reticulate::use_condaenv("rgee", required = TRUE)
 
 library(rgee)
 library(reticulate) #interfacce between R and python just in case
@@ -13,6 +13,8 @@ library(ggspatial)
 library(tidyterra)
 library(ggpubr)
 library(deltamapr)
+
+ee_Authenticate()
 
 #####################
 #SETTING UP SHAPEFILES
@@ -55,7 +57,7 @@ ggplot() +
   #geom_sf(data = filtered_watersheds, fill = "grey") +
   #geom_sf(data = WW_DBW, fill = "grey") +
   #geom_sf(data = WW_Watershed, fill = "grey") +
-  geom_spatraster(data = raster_data, alpha = 0.9) +
+  geom_spatraster(data = chlorophyll, alpha = 0.9) +
   scale_fill_viridis_c() +
   labs(title = "Landsat 9 TOA",
        fill = "Reflectance") +
